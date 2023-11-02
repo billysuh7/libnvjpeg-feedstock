@@ -3,6 +3,7 @@ About libnvjpeg-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libnvjpeg-feedstock/blob/main/LICENSE.txt)
 
+
 About libnvjpeg
 ---------------
 
@@ -16,6 +17,7 @@ Documentation: https://docs.nvidia.com/cuda/nvjpeg/index.html
 
 nvJPEG native runtime libraries
 
+
 About libnvjpeg-static
 ----------------------
 
@@ -28,6 +30,7 @@ Summary: nvJPEG native runtime libraries
 Documentation: https://docs.nvidia.com/cuda/nvjpeg/index.html
 
 nvJPEG native runtime libraries
+
 
 About libnvjpeg-dev
 -------------------
@@ -86,6 +89,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19174&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libnvjpeg-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19174&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libnvjpeg-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
             </tr>

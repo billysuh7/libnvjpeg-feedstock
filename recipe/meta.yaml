@@ -24,15 +24,21 @@ source:
   sha256: b7cb56ab2c69e055a4b1ea41653df917153a568ab23fb0d8121e0739011989a8  # [win]
 
 build:
-  number: 0
+  number: 1
+  binary_relocation: false
   skip: true  # [osx]
 
 test:
+  requires:
+    - patchelf  # [linux]
+  files:
+    - test-rpath.sh
   commands:
     - test -L $PREFIX/lib/libnvjpeg.so.{{ version.split(".")[0] }}                            # [linux]
     - test -L $PREFIX/lib/libnvjpeg.so.{{ version }}                                          # [linux]
     - test -L $PREFIX/targets/{{ target_name }}/lib/libnvjpeg.so.{{ version.split(".")[0] }}  # [linux]
     - test -f $PREFIX/targets/{{ target_name }}/lib/libnvjpeg.so.{{ version }}                # [linux]
+    - bash test-rpath.sh                                                                      # [linux]
     - if not exist %LIBRARY_BIN%\nvjpeg64_{{ version.split(".")[0] }}.dll exit 1              # [win]
 
 outputs:
@@ -46,6 +52,7 @@ outputs:
         - {{ compiler("c") }}
         - {{ compiler("cxx") }}
         - arm-variant * {{ arm_variant_type }}  # [aarch64]
+        - patchelf <0.18.0                      # [linux]
       host:
         - cuda-version {{ cuda_version }}
       run:

@@ -1,6 +1,6 @@
 {% set name = "libnvjpeg" %}
-{% set version = "12.0.0.28" %}
-{% set cuda_version = "12.0" %}
+{% set version = "12.2.0.2" %}
+{% set cuda_version = "12.1" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
 {% set platform = "linux-ppc64le" %}  # [ppc64le]
 {% set platform = "linux-sbsa" %}  # [aarch64]
@@ -18,13 +18,13 @@ package:
 
 source:
   url: https://developer.download.nvidia.com/compute/cuda/redist/{{ name }}/{{ platform }}/{{ name }}-{{ platform }}-{{ version }}-archive.{{ extension }}
-  sha256: ad3380591a4d5b97ab57d10e9bf05e23dee6429ff91ea939423a3b35ee0e35de  # [linux64]
-  sha256: f7136bb691d794c680d77376b306bedb80eeebf687bfa4dc74355fdae5adcebb  # [ppc64le]
-  sha256: 31fd6ee0dccc72f0d583e25b849543551eb4bc49d3285628bf3b17929e09bac1  # [aarch64]
-  sha256: b7cb56ab2c69e055a4b1ea41653df917153a568ab23fb0d8121e0739011989a8  # [win]
+  sha256: d293267a822c8c87a53cee97cccf49b2eb20c53b99f477328dfa1d7d1c5c7f75  # [linux64]
+  sha256: 9312eda8337dafa28b4abbca013d1c8bc530de504dd44c0836ba1050929b20fd  # [ppc64le]
+  sha256: 54add0d5e2ba36880f47c9a45bdaf9d6b2e41311e40a8d4b933d46f774a6a2fe  # [aarch64]
+  sha256: f7e51c1c86298b5ef35d17435234d3ffa8d28e8d10c2439c87bb1875e77f8726  # [win]
 
 build:
-  number: 1
+  number: 0
   binary_relocation: false
   skip: true  # [osx]
 
@@ -152,4 +152,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - adibbley
+    - conda-forge/cuda

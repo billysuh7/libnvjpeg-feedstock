@@ -1,6 +1,6 @@
 {% set name = "libnvjpeg" %}
-{% set version = "12.3.3.54" %}
-{% set cuda_version = "12.6" %}
+{% set version = "12.3.5.57" %}
+{% set cuda_version = "12.8" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
 {% set platform = "linux-ppc64le" %}  # [ppc64le]
 {% set platform = "linux-sbsa" %}  # [aarch64]
@@ -18,9 +18,9 @@ package:
 
 source:
   url: https://developer.download.nvidia.com/compute/cuda/redist/{{ name }}/{{ platform }}/{{ name }}-{{ platform }}-{{ version }}-archive.{{ extension }}
-  sha256: f74f6aee35ef4fb1619bc2a67be943c3d1a84d6746b41788c44a7d3b0d9ae3b4  # [linux64]
-  sha256: 6970db1c9757f3ae30adba21d7c1306fd5afc4cb034b0739c711691a481d3ed4  # [aarch64]
-  sha256: 15c1b28e623598eb75f48d02bfd34efa83b35e3f8d1d5241c93a385d0bea9d18  # [win]
+  sha256: 00f83dfb3fc88452674a9e816ec11d8a52d0a4de68596d7e130980b461e509cb  # [linux64]
+  sha256: a65047691bc89de01591d6417cfa941e490f97d82f4ef3f53b1ef1a5c23ea4ba  # [aarch64]
+  sha256: 569f1a6c0b8e41ba79e2998800b56626ac2bde80114eb6bfd5eeafc3f210a884  # [win]
 
 build:
   number: 0

@@ -23,7 +23,7 @@ source:
   sha256: deb4e42a883da34f6035ac929b7d125da2aaac3878bd48570f1d865fdd77220e  # [win]
 
 build:
-  number: 0
+  number: 1
   binary_relocation: false
   skip: true  # [osx or ppc64le]
 
@@ -115,7 +115,7 @@ outputs:
 
   - name: libnvjpeg-static
     build:
-      skip: True  # [not linux]
+      skip: true  # [not linux]
     files:
       - targets/{{ target_name }}/lib/libnvjpeg_static.a  # [linux]
     requirements:

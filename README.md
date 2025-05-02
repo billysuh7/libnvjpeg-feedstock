@@ -18,8 +18,8 @@ Documentation: https://docs.nvidia.com/cuda/nvjpeg/index.html
 nvJPEG native runtime libraries
 
 
-About libnvjpeg-static
-----------------------
+About libnvjpeg-dev
+-------------------
 
 Home: https://developer.nvidia.com/cuda-toolkit
 
@@ -32,8 +32,8 @@ Documentation: https://docs.nvidia.com/cuda/nvjpeg/index.html
 nvJPEG native runtime libraries
 
 
-About libnvjpeg-dev
--------------------
+About libnvjpeg-static
+----------------------
 
 Home: https://developer.nvidia.com/cuda-toolkit
 
